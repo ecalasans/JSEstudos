@@ -29,6 +29,34 @@ window.onload = function () {
 
 //Demonstração do drag-and-drop
 function allowDrop(ev) {
-    ev.preventDefault()
+    ev.preventDefault();
 }
 
+function drag(ev) {
+    ev.dataTransfer.setData("Text", ev.target.id);
+}
+
+function drop(ev) {
+    /*var data = ev.dataTransfer.getData("Text");
+    ev.target.appendChild(document.getElementById(data));
+    ev.preventDefault();*/
+
+    var files = ev.dataTransfer.files;
+    for (var i = 0; i < files.length; i++){
+        var f = files[i];
+        var p_node = document.createElement("p");
+        var t_node = document.createTextNode(f.name + "(" +
+            f.type + ")" + f.size + " bytes ");
+        p_node.appendChild(t_node);
+        ev.target.appendChild(p_node);
+    }
+    ev.preventDefault();
+}
+
+window.onload = function () {
+    //var dragged = document.getElementById("drag1");
+    var drophere = document.getElementById("drop1");
+    //dragged.ondragstart = drag;
+    drophere.ondragover = allowDrop;
+    drophere.ondrop = drop;
+}
