@@ -1,0 +1,40 @@
+#div1{
+    background-color: #8080ff;
+    width: 400px;
+    height: 250px;
+    -webkit-box-shadow: 10px 10px 10px #808080;
+    -moz-box-shadow: 10px 10px 10px #808080;
+    box-shadow: 10px 10px 10px #808080;
+    -webkit-border-radius: 25px;
+    -moz-border-radius: 25px;
+    border-radius: 25px;
+}
+
+#div2{
+    width: 400px;
+    height: 250px;
+    -webkit-background-size: 400px;
+    background-size: 400px;
+    -webkit-border-radius: 25px;
+    -moz-border-radius: 25px;
+    border-radius: 25px;
+    background-image: url("../hora13/IMG_1058.jpg");
+    
+}
+
+#div3 {
+    width: 400px;
+    height: 250px;
+    -webkit-border-radius: 25px;
+    -moz-border-radius: 25px;
+    border-radius: 25px;
+    background: -moz-linear-gradient(red, #6699cc);
+    background: -webkit-linear-gradient(red, #6699cc);
+    background: -o-linear-gradient(red, #6699cc);
+    background: linear-gradient(red, #6699cc);
+}
+
+h3 {
+    text-shadow: 10px 10px 3px #333;
+    font-size: 26px;
+}
